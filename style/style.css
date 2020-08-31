@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url('images/2.jpg');
+
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'nav'
+        'main'
+        'contact'
+        'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 500px 600px 50px;
+}
+
+.nav {
+    grid-area: nav;
+    background: linear-gradient(rgb(181, 196, 202), rgb(169, 226, 220) ,rgb(240, 245, 241));
+
+ 
+}
+
+nav ul {
+    display: flex;
+}
+
+nav > ul li {
+    padding: 0.2em;
+    margin: 1em;
+    list-style: none;
+    
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(255,255,255);
+}
+
+.main {
+    grid-area: main;
+    background: url('../images/6.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    height: 400px;
+}
+
+
+.footer {
+    grid-area: footer;
+    background: linear-gradient(to right,#e6e9e5, rgb(143, 194, 133)); 
+
+}
+
+#footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.nav , .main , .footer {
+    padding: 1em;
+}
+
+a > img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-container {
+    border-top: 2px solid grey;
+    background: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+  
+    font-family: 'Oswald', sans-serif;
+}
+
+.contact-container h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+.contact-container p {
+    text-align: center;
+    font-size: 15px;
+}
+
+.grid-container {
+    grid-template-columns: 50% 50%;
+}
+
+form {
+    text-align: center;
+    padding: 2px;
+    margin: 2px;
+  }
+  
+  input {
+    border: none;
+    padding: 10px;
+    border-bottom: 2px solid grey;
+    margin: 5px;
+    
+    
+  }
+
+  .blank {
+      grid-area: blank;
+      visibility: none;
+  }
+  
+  textarea {
+    border: none;
+    border-bottom: 2px solid grey;
+    margin: 15px;
+    
+  }
+  
+  #submit {
+    width: 200px;
+    color: grey;
+    border: none;
+    border-radius: 15px;
+    
+  }
+
+  @media (min-width: 900px){
+      .container {
+          grid-template-areas: 
+            'nav  main'
+            'nav contact '
+            'nav footer';
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 1fr auto;
+          ;
+      }
+
+      .main {
+          background-image: url('../images/5.jpg');
+          background-size: cover;
+          text-align: left;
+      }
+
+      .main img {
+          display: relative;
+          float: right;
+      }
+
+      
+      nav ul {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+      }
+  }
+
+
+
+
